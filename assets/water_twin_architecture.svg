@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="Water infrastructure digital twin architecture">
+  <rect width="1200" height="420" fill="#f8fafc"/>
+  <style>.box{fill:#ffffff;stroke:#0f172a;stroke-width:2;rx:18}.title{font:700 24px Arial;fill:#0f172a}.text{font:600 16px Arial;fill:#1e293b}.arrow{stroke:#2563eb;stroke-width:4;marker-end:url(#a)}</style>
+  <defs><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2563eb"/></marker></defs>
+  <text x="60" y="48" class="title">AI Water Infrastructure Leak and Contamination Digital Twin</text>
+  <rect class="box" x="45" y="90" width="185" height="90"/><text x="70" y="125" class="text">Synthetic water</text><text x="70" y="150" class="text">network</text>
+  <rect class="box" x="270" y="90" width="185" height="90"/><text x="300" y="125" class="text">Sensor telemetry</text><text x="300" y="150" class="text">simulation</text>
+  <rect class="box" x="495" y="90" width="185" height="90"/><text x="525" y="125" class="text">Feature</text><text x="525" y="150" class="text">engineering</text>
+  <rect class="box" x="720" y="90" width="185" height="90"/><text x="750" y="125" class="text">Anomaly</text><text x="750" y="150" class="text">scoring</text>
+  <rect class="box" x="945" y="90" width="205" height="90"/><text x="975" y="125" class="text">Response</text><text x="975" y="150" class="text">priority</text>
+  <path class="arrow" d="M230 135 L270 135"/><path class="arrow" d="M455 135 L495 135"/><path class="arrow" d="M680 135 L720 135"/><path class="arrow" d="M905 135 L945 135"/>
+  <rect class="box" x="270" y="245" width="205" height="90"/><text x="302" y="280" class="text">Robustness tests</text><text x="302" y="305" class="text">missing/noisy sensors</text>
+  <rect class="box" x="570" y="245" width="205" height="90"/><text x="602" y="280" class="text">Evaluation</text><text x="602" y="305" class="text">and reports</text>
+  <rect class="box" x="870" y="245" width="205" height="90"/><text x="902" y="280" class="text">Hash-chained</text><text x="902" y="305" class="text">audit ledger</text>
+  <path class="arrow" d="M815 180 C790 240 550 240 475 285"/><path class="arrow" d="M475 290 L570 290"/><path class="arrow" d="M775 290 L870 290"/>
+</svg>
