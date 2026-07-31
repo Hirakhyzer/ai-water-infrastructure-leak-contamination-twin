@@ -1,0 +1,11 @@
+seed: 42
+zones: 18
+sensors: 72
+hours: 72
+thresholds:
+  leak: 0.50
+  contamination: 0.48
+  sensor_fault: 0.55
+responsible_use:
+  default_data: synthetic
+  boundary: planning support only; not public-health advice or utility-control software
