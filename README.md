@@ -1,48 +1,94 @@
-# AI Water Infrastructure Leak and Contamination Digital Twin
+<p align="center">
+  <img src="assets/banner.svg" alt="AI Water Infrastructure Leak and Contamination Digital Twin banner" width="100%" />
+</p>
 
-<p align="center"><strong>Independent research-grade synthetic water-infrastructure digital twin for detecting leaks, contamination anomalies, sensor faults, pressure drops, flow surges, and response priorities across a fictional water utility network.</strong></p>
+<h1 align="center">AI Water Infrastructure Leak and Contamination Digital Twin</h1>
+
+<p align="center">
+  <b>A research-grade synthetic water-infrastructure digital twin for leak-like pressure events, contamination-like quality shifts, sensor-fault separation, robustness testing, and response-priority review.</b>
+</p>
 
 <p align="center">
   <a href="../../actions/workflows/python-checks.yml"><img src="../../actions/workflows/python-checks.yml/badge.svg" alt="Python checks"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-1f6feb.svg" alt="MIT License"></a>
-  <img src="https://img.shields.io/badge/default%20data-synthetic%20water%20network-2ad4c9.svg" alt="Synthetic data">
-  <img src="https://img.shields.io/badge/project-planning%20support%20only-f59e0b.svg" alt="Planning support only">
+  <img alt="Status" src="https://img.shields.io/badge/status-research--prototype-7C3AED?style=for-the-badge" />
+  <img alt="Digital Twin" src="https://img.shields.io/badge/Water--Infrastructure-Digital--Twin-06B6D4?style=for-the-badge" />
+  <img alt="Risk Review" src="https://img.shields.io/badge/Leak%20%2B%20Contamination-Risk--Review-F59E0B?style=for-the-badge" />
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
 </p>
 
-> **Water-safety boundary:** this repository uses fictional synthetic zones, pipes, pumps, tanks, sensors, and telemetry by default. It is independent research and planning-support infrastructure only. It is not public-health advice, drinking-water safety certification, emergency-response software, SCADA/utility-control software, or a replacement for water utility engineers, certified laboratories, regulators, or public-health authorities.
+---
+
+## Overview
+
+**AI Water Infrastructure Leak and Contamination Digital Twin** is an independent academic research prototype for studying how AI-assisted monitoring can support water-utility engineering review. It uses fictional synthetic zones, pipes, tanks, pumps, sensors, and telemetry to evaluate leak-like pressure/flow anomalies, contamination-like water-quality shifts, sensor-fault behavior, and response-priority ranking.
+
+The project is designed around one careful research question: **can a synthetic digital twin help detect and triage water-infrastructure risk signals while keeping results auditable, reproducible, and clearly separated from real public-health decisions?**
+
+It is useful for research and teaching in:
+
+- Smart water infrastructure and cyber-physical systems.
+- Leak-like pressure-drop and flow-surge detection.
+- Contamination-like water-quality anomaly review.
+- Sensor-fault separation and calibration-risk analysis.
+- Missing/noisy sensor robustness testing.
+- Response-priority scoring for engineering review.
+- Responsible AI, auditability, and reproducible infrastructure simulation.
+
+> **Water-safety boundary:** this repository uses synthetic data only. It is not public-health advice, drinking-water safety certification, emergency-response software, SCADA/utility-control software, or a replacement for water utility engineers, certified laboratories, regulators, or public-health authorities.
 
 ---
 
 ## Research objective
 
-Can an AI water-infrastructure digital twin detect leaks, contamination anomalies, and sensor faults while prioritizing response actions across a synthetic utility network?
+Can an AI water-infrastructure digital twin detect leak-like, contamination-like, and sensor-fault-like signals while prioritizing engineering review across a synthetic utility network?
 
 | Research question | Evidence generated locally |
-| --- | --- |
-| Where are leak-like pressure and flow anomalies? | Leak-risk scores and pipe/zone anomaly tables |
-| Where are contamination-like water-quality anomalies? | Turbidity, chlorine, pH, and conductivity shift scores |
-| Which alerts may be sensor faults? | Sensor-fault separation and calibration-risk scores |
-| How robust is detection under bad telemetry? | Missing/noisy sensor stress tests |
-| Which zones need engineering review first? | Response-priority ranking and review windows |
-| Can runs be reproduced? | JSON summary and hash-chained audit ledger |
+|---|---|
+| Where are leak-like pressure and flow anomalies? | Leak-risk scores and zone/pipe anomaly tables |
+| Where are contamination-like quality shifts? | Turbidity, chlorine, pH, and conductivity shift scores |
+| Which alerts may actually be sensor faults? | Sensor-fault separation and calibration-risk features |
+| How robust is detection under weak telemetry? | Missing/noisy sensor stress tests |
+| Which zones need review first? | Response-priority ranking and review windows |
+| Can runs be reproduced? | CSV outputs, JSON summary, figures, reports, and hash-chained audit ledger |
 
 ---
 
 ## Architecture
 
-<p align="center"><img src="assets/water_twin_architecture.svg" alt="Water infrastructure digital twin architecture" width="100%"></p>
+<p align="center">
+  <img src="assets/water_twin_architecture.svg" alt="Water infrastructure digital twin architecture" width="94%" />
+</p>
 
 ```mermaid
 flowchart LR
-  A[Synthetic water network] --> B[Pipes, pumps, tanks, sensors]
-  B --> C[Pressure, flow, chlorine, pH, turbidity telemetry]
-  C --> D[Feature extraction]
-  D --> E[Leak, contamination, and sensor-fault scoring]
-  E --> F[Robustness tests under missing/noisy sensors]
-  E --> G[Response-priority ranking]
-  F --> H[Reports, figures, and audit ledger]
-  G --> H
+  A[Synthetic water network] --> B[Pressure, flow, and quality telemetry]
+  B --> C[Feature extraction]
+  C --> D[Leak, contamination, and sensor-fault scoring]
+  D --> E[Robustness tests]
+  D --> F[Response-priority ranking]
+  E --> G[Reports, figures, and audit ledger]
+  F --> G
 ```
+
+<p align="center">
+  <img src="assets/water-infrastructure-workflow.svg" alt="Water infrastructure leak and contamination review workflow" width="92%" />
+</p>
+
+The workflow is intentionally transparent. Each output is a synthetic engineering review prompt, not an automated utility action.
+
+---
+
+## Core capabilities
+
+| Capability | What it does | Why it matters |
+|---|---|---|
+| Synthetic utility twin | Builds fictional zones, pipes, pumps, tanks, sensors, and telemetry | Enables safe experimentation without real utility data |
+| Leak-like anomaly scoring | Reviews pressure drops, flow surges, and zone-level patterns | Helps study early leak-detection workflows |
+| Contamination-like signal review | Flags quality shifts in turbidity, chlorine, pH, and conductivity | Supports transparent contamination-pattern simulation |
+| Sensor-fault separation | Tracks missing data, noisy readings, drift, and calibration risk | Reduces confusion between infrastructure events and bad telemetry |
+| Robustness testing | Stress-tests detection under missing/noisy sensors | Shows how fragile a detection method may be |
+| Response-priority ranking | Ranks review windows by risk, critical customers, equity, and infrastructure age | Supports planning-style triage without automating action |
+| Audit ledger | Writes hash-chained run records | Supports reproducibility and research accountability |
 
 ---
 
@@ -63,7 +109,7 @@ py -m venv .venv
 
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python scripts/run_synthetic_water_lab.py
+python scripts\run_synthetic_water_lab.py
 ```
 
 Optional larger run:
@@ -109,21 +155,32 @@ outputs/figures/synthetic_priority_bands.png
 
 ---
 
-## Digital twin modules
+## Signal groups
 
-| Module | Purpose |
-| --- | --- |
-| Synthetic generator | Builds fictional zones, pipes, tanks, pumps, sensors, and telemetry |
-| Feature engineering | Creates pressure-drop, flow-surge, water-quality-shift, missing-data, and sensor-fault features |
-| Detection scoring | Separates leak-like, contamination-like, and sensor-fault-like risk signals |
-| Robustness testing | Tests score degradation under missing pressure, noisy flow, quality noise, dropout, and calibration drift |
-| Priority planning | Ranks affected zones by risk, critical customers, equity, and infrastructure age |
-| Evaluation | Computes synthetic accuracy, precision, recall, F1, and confusion matrix |
-| Reporting | Produces Markdown reports, CSVs, JSON summaries, figures, and audit logs |
+| Signal group | Example indicators | Interpretation boundary |
+|---|---|---|
+| Leak-like behavior | Pressure drop, flow surge, zone imbalance | Engineering review prompt only |
+| Contamination-like behavior | Turbidity shift, chlorine drop, pH excursion, conductivity change | Not a lab-confirmed contamination claim |
+| Sensor-fault-like behavior | Missing values, noisy readings, drift, calibration risk | Needs instrument review before interpretation |
+| Priority context | Critical customers, infrastructure age, equity proxy, event severity | Planning-style ranking only |
 
 ---
 
-## Independent water-infrastructure boundary
+## Robustness and safety checks
+
+The lab includes stress tests for weak telemetry conditions:
+
+| Stress test | Purpose |
+|---|---|
+| Missing pressure | Reviews detection stability when pressure sensors drop out |
+| Noisy flow | Tests sensitivity to unstable flow readings |
+| Quality noise | Checks whether contamination-like scoring is too fragile |
+| Sensor dropout | Measures behavior under partial telemetry loss |
+| Calibration drift | Separates gradual sensor error from real event signals |
+
+---
+
+## Responsible water-infrastructure boundary
 
 This project supports synthetic planning, research prototyping, education, and reproducible analysis. Real water-system decisions require calibrated field instruments, certified lab sampling, validated hydraulic models, utility engineers, public-health authorities, incident command procedures, chain-of-custody, and formal governance.
 
@@ -146,23 +203,47 @@ src/watertwin/
   reporting.py       # Markdown water-infrastructure report
 scripts/
   run_synthetic_water_lab.py
+assets/
+  banner.svg
+  water_twin_architecture.svg
+  water-infrastructure-workflow.svg
 docs/
-  methodology.md
-  water_safety_boundary.md
-  synthetic_lab.md
-  report_template.md
-tests/
-  test_synthetic.py
-  test_water_modules.py
-  test_pipeline.py
-  test_audit.py
+  governance-and-ethics.md
+  reproducibility-playbook.md
+  publication-readiness-plan.md
 ```
+
+---
+
+## Documentation
+
+- [`docs/governance-and-ethics.md`](docs/governance-and-ethics.md): water-safety, data-governance, and AI-control boundaries.
+- [`docs/reproducibility-playbook.md`](docs/reproducibility-playbook.md): run records, output bundles, and interpretation rules.
+- [`docs/publication-readiness-plan.md`](docs/publication-readiness-plan.md): possible academic framing and paper structure.
+
+---
+
+## Future extensions
+
+| Extension | Requirement before claiming results |
+|---|---|
+| Real telemetry validation | Utility permission, data governance, and calibrated sensors |
+| Hydraulic model integration | Model assumptions, calibration, and engineer review |
+| Lab-confirmed quality data | Chain of custody and certified testing procedure |
+| Real-time deployment | Cybersecurity review, fail-safe controls, and human-in-the-loop design |
+| Equity-aware service review | Community context and service-impact assessment |
+| Cross-utility benchmarking | Comparable schemas, uncertainty reporting, and governance approval |
 
 ---
 
 ## Limitations
 
-- Synthetic data validates the pipeline but does not prove real-world leak or contamination detection performance.
+- Synthetic data validates pipeline behavior, not real-world leak or contamination detection performance.
 - Scores are review prompts, not drinking-water safety determinations.
 - Sensor-fault separation is a transparent baseline, not a certified diagnostic model.
+- Response-priority ranking is not emergency dispatch guidance.
 - Real deployments require certified measurements, field validation, expert review, regulatory governance, and uncertainty communication.
+
+## License
+
+Released under the [MIT License](LICENSE). Synthetic examples are provided for research and education only.
