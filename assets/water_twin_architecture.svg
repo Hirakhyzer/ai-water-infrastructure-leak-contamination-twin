@@ -1,16 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="Water infrastructure digital twin architecture">
-  <rect width="1200" height="420" fill="#f8fafc"/>
-  <style>.box{fill:#ffffff;stroke:#0f172a;stroke-width:2;rx:18}.title{font:700 24px Arial;fill:#0f172a}.text{font:600 16px Arial;fill:#1e293b}.arrow{stroke:#2563eb;stroke-width:4;marker-end:url(#a)}</style>
-  <defs><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2563eb"/></marker></defs>
-  <text x="60" y="48" class="title">AI Water Infrastructure Leak and Contamination Digital Twin</text>
-  <rect class="box" x="45" y="90" width="185" height="90"/><text x="70" y="125" class="text">Synthetic water</text><text x="70" y="150" class="text">network</text>
-  <rect class="box" x="270" y="90" width="185" height="90"/><text x="300" y="125" class="text">Sensor telemetry</text><text x="300" y="150" class="text">simulation</text>
-  <rect class="box" x="495" y="90" width="185" height="90"/><text x="525" y="125" class="text">Feature</text><text x="525" y="150" class="text">engineering</text>
-  <rect class="box" x="720" y="90" width="185" height="90"/><text x="750" y="125" class="text">Anomaly</text><text x="750" y="150" class="text">scoring</text>
-  <rect class="box" x="945" y="90" width="205" height="90"/><text x="975" y="125" class="text">Response</text><text x="975" y="150" class="text">priority</text>
-  <path class="arrow" d="M230 135 L270 135"/><path class="arrow" d="M455 135 L495 135"/><path class="arrow" d="M680 135 L720 135"/><path class="arrow" d="M905 135 L945 135"/>
-  <rect class="box" x="270" y="245" width="205" height="90"/><text x="302" y="280" class="text">Robustness tests</text><text x="302" y="305" class="text">missing/noisy sensors</text>
-  <rect class="box" x="570" y="245" width="205" height="90"/><text x="602" y="280" class="text">Evaluation</text><text x="602" y="305" class="text">and reports</text>
-  <rect class="box" x="870" y="245" width="205" height="90"/><text x="902" y="280" class="text">Hash-chained</text><text x="902" y="305" class="text">audit ledger</text>
-  <path class="arrow" d="M815 180 C790 240 550 240 475 285"/><path class="arrow" d="M475 290 L570 290"/><path class="arrow" d="M775 290 L870 290"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="Water infrastructure digital twin architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#ecfeff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0284c7"/>
+    </marker>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title{font:800 28px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .subtitle{font:500 14px Arial,Helvetica,sans-serif;fill:#475569}
+      .label{font:700 16px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .small{font:500 12.5px Arial,Helvetica,sans-serif;fill:#475569}
+      .box{fill:#ffffff;stroke:#bae6fd;stroke-width:2;rx:20;filter:url(#shadow)}
+      .arrow{stroke:#0284c7;stroke-width:3;marker-end:url(#arrow);fill:none}
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" rx="28" fill="url(#bg)"/>
+  <text class="title" x="46" y="54">Water Infrastructure Leak and Contamination Digital Twin</text>
+  <text class="subtitle" x="46" y="82">Clean architecture view with separated stages, readable labels, and no overlapping text.</text>
+
+  <g>
+    <rect class="box" x="52" y="130" width="170" height="98"/>
+    <text class="label" x="78" y="166">Synthetic</text>
+    <text class="label" x="78" y="188">Network</text>
+    <text class="small" x="78" y="212">zones, pipes, pumps</text>
+
+    <rect class="box" x="270" y="130" width="170" height="98"/>
+    <text class="label" x="296" y="166">Telemetry</text>
+    <text class="label" x="296" y="188">Stream</text>
+    <text class="small" x="296" y="212">pressure, flow, quality</text>
+
+    <rect class="box" x="488" y="130" width="170" height="98"/>
+    <text class="label" x="514" y="166">Feature</text>
+    <text class="label" x="514" y="188">Extraction</text>
+    <text class="small" x="514" y="212">drops, surges, shifts</text>
+
+    <rect class="box" x="706" y="130" width="170" height="98"/>
+    <text class="label" x="732" y="166">Risk</text>
+    <text class="label" x="732" y="188">Scoring</text>
+    <text class="small" x="732" y="212">leak, quality, fault</text>
+
+    <rect class="box" x="924" y="130" width="210" height="98"/>
+    <text class="label" x="950" y="166">Response</text>
+    <text class="label" x="950" y="188">Prioritization</text>
+    <text class="small" x="950" y="212">rank review windows</text>
+  </g>
+
+  <path class="arrow" d="M222 179 H270"/>
+  <path class="arrow" d="M440 179 H488"/>
+  <path class="arrow" d="M658 179 H706"/>
+  <path class="arrow" d="M876 179 H924"/>
+
+  <g>
+    <rect class="box" x="184" y="318" width="218" height="100"/>
+    <text class="label" x="214" y="354">Robustness Tests</text>
+    <text class="small" x="214" y="382">missing sensors, noisy flow,</text>
+    <text class="small" x="214" y="402">quality noise, drift</text>
+
+    <rect class="box" x="491" y="318" width="218" height="100"/>
+    <text class="label" x="521" y="354">Evaluation</text>
+    <text class="small" x="521" y="382">metrics, confusion matrix,</text>
+    <text class="small" x="521" y="402">reports and figures</text>
+
+    <rect class="box" x="798" y="318" width="218" height="100"/>
+    <text class="label" x="828" y="354">Audit Ledger</text>
+    <text class="small" x="828" y="382">hash-chained run record</text>
+    <text class="small" x="828" y="402">for reproducibility</text>
+  </g>
+
+  <path class="arrow" d="M790 228 C754 276 448 276 370 318"/>
+  <path class="arrow" d="M402 368 H491"/>
+  <path class="arrow" d="M709 368 H798"/>
+
+  <rect x="52" y="452" width="1082" height="40" rx="20" fill="#e0f2fe" stroke="#0891b2"/>
+  <text class="small" x="593" y="477" text-anchor="middle">Boundary: synthetic planning-support output only — not SCADA control, emergency response, or certified water-safety decision software.</text>
 </svg>
