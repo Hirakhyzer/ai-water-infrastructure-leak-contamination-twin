@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-label="Water infrastructure monitoring workflow">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0fdfa"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0f766e"/>
+    </marker>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.11"/>
+    </filter>
+    <style>
+      .title{font:800 27px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .subtitle{font:500 14px Arial,Helvetica,sans-serif;fill:#475569}
+      .label{font:700 16px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .small{font:500 12.5px Arial,Helvetica,sans-serif;fill:#475569}
+      .box{fill:#ffffff;stroke:#99f6e4;stroke-width:2;rx:20;filter:url(#shadow)}
+      .arrow{stroke:#0f766e;stroke-width:3;marker-end:url(#arrow);fill:none}
+    </style>
+  </defs>
+
+  <rect width="1100" height="430" rx="28" fill="url(#bg)"/>
+  <text class="title" x="44" y="54">Leak and Contamination Review Workflow</text>
+  <text class="subtitle" x="44" y="80">Each stage is separated for readability and transparent interpretation.</text>
+
+  <g>
+    <rect class="box" x="50" y="130" width="160" height="94"/>
+    <text class="label" x="75" y="164">Generate</text>
+    <text class="label" x="75" y="185">Network</text>
+    <text class="small" x="75" y="208">fictional utility twin</text>
+
+    <rect class="box" x="255" y="130" width="160" height="94"/>
+    <text class="label" x="280" y="164">Simulate</text>
+    <text class="label" x="280" y="185">Telemetry</text>
+    <text class="small" x="280" y="208">pressure + quality</text>
+
+    <rect class="box" x="460" y="130" width="160" height="94"/>
+    <text class="label" x="485" y="164">Score</text>
+    <text class="label" x="485" y="185">Signals</text>
+    <text class="small" x="485" y="208">leak, fault, quality</text>
+
+    <rect class="box" x="665" y="130" width="160" height="94"/>
+    <text class="label" x="690" y="164">Prioritize</text>
+    <text class="label" x="690" y="185">Review</text>
+    <text class="small" x="690" y="208">zones and windows</text>
+
+    <rect class="box" x="870" y="130" width="180" height="94"/>
+    <text class="label" x="895" y="164">Report</text>
+    <text class="label" x="895" y="185">Evidence</text>
+    <text class="small" x="895" y="208">CSV, figures, ledger</text>
+  </g>
+
+  <path class="arrow" d="M210 177 H255"/>
+  <path class="arrow" d="M415 177 H460"/>
+  <path class="arrow" d="M620 177 H665"/>
+  <path class="arrow" d="M825 177 H870"/>
+
+  <rect x="70" y="304" width="960" height="72" rx="22" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text class="label" x="100" y="336">Interpretation boundary</text>
+  <text class="small" x="100" y="361">Outputs are synthetic engineering review prompts. Real use requires field calibration, utility engineers, lab confirmation, regulators, and public-health governance.</text>
+</svg>
